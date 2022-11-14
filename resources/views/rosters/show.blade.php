@@ -7,6 +7,11 @@
             <div class="col-6">
                 <div class="card">
                     <div class="card-body">
+                        <div class="btn-group float-end">
+                        <a href="/export-player?team={{ $roster->team_code }}&player={{ $roster->name }}&format=csv" class="btn btn-sm btn-success" target="_blank">Excel</a>
+                        <a href="/export-player?team={{ $roster->team_code }}&player={{ $roster->name }}&format=json" class="btn btn-sm btn-success" target="_blank">Json</a>
+                        <a href="/export-player?team={{ $roster->team_code }}&player={{ $roster->name }}&format=xml" class="btn btn-sm btn-success" target="_blank">Xml</a>
+                        </div>
                         <img src="..." class="card-img-top rounded mx-auto d-block" alt="...">
                         <h2>{{ $roster->name }}</h2>
                         <h3>{{ $roster->number }}</h3>

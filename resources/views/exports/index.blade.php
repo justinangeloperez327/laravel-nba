@@ -7,10 +7,11 @@
                 <h3>Export</h3>
                 <div class="card">
                     <div class="card-body">
-                        <form action="/export/">
+                        <form action="/export-roster" method="POST">
+                            @method('POST')
                             <div class="form-group">
                                 <label for="">Type</label>
-                                <select name="" id="" class="form-control" name="team_code" id="team_code">
+                                <select name="" id="" class="form-control" name="type" id="type">
                                     <option value="playerstats">Player Stats</option>
                                     <option value="player">Players</option>
                                 </select>
@@ -26,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Position</label>
-                                <select name="" id="" class="form-control" name="team_code" id="team_code">
+                                <select name="" id="" class="form-control" name="position" id="position">
                                     <option value="all">All</option>
                                     <option value="C">Center</option>
                                     <option value="PF">Power Forward</option>

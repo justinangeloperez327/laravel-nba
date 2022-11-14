@@ -18,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TeamController::class, 'index']);
 
-Route::resource('teams', TeamController::class);
-Route::resource('rosters', RosterController::class);
+
 Route::get('fetch-rosters', [RosterController::class, 'fetchRosters']);
 Route::get('/exports', [ExportController::class, 'index']);
-Route::post('/exports', [ExportController::class, 'export']);
-
+Route::post('/exports', [RosterController::class, 'export']);
+Route::get('/export-roster', [RosterController::class, 'export']);
+Route::post('/export-roster', [RosterController::class, 'export']);
+Route::get('/export-player', [RosterController::class, 'exportPlayer']);
+Route::get('/export-player', [RosterController::class, 'exportPlayer']);
+Route::resource('teams', TeamController::class);
+Route::resource('rosters', RosterController::class);
